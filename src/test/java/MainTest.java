@@ -11,7 +11,7 @@ public class MainTest {
 
         String msg = main.getString();
 
-        assertEquals("Hello5",msg);
+        assertEquals("Hello",msg);
 
     }
 
