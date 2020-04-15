@@ -1,35 +1,27 @@
 package um.cps2002;
 
 import java.util.Random;
-import java.util.Scanner;
 
 public class Player {
     private Random rand = new Random();
-    private Scanner sc = new Scanner(System.in);
 
-    private Position position;
-    private Position start;
+    public Position position;
+    public Position start;
 
-    Player(){
+    public Player(){
         this.position = new Position();
         this.start = new Position();
     }
 
-    void move(Map map) {
-        char direction = 0;
-        boolean valid = false;
-
-        while(!valid) {
-            direction = sc.next().charAt(0);
-
-            if((direction == 'U' && position.y == 0)
-                    || (direction == 'D' && position.y == map.size - 1)
-                    || (direction == 'L' && position.x == 0)
-                    || ((direction == 'R' && position.x == map.size - 1))){
-                System.out.println("Invalid move please try again");
-            }else if (direction == 'U' || direction == 'D' || direction == 'L' || direction == 'R')
-                valid = true;
+    public Position move(Map map, char direction) {
+        if ((direction == 'U' && position.y == 0)
+                || (direction == 'D' && position.y == map.size - 1)
+                || (direction == 'L' && position.x == 0)
+                || ((direction == 'R' && position.x == map.size - 1))) {
+            System.out.println("Invalid move");
+            return position;
         }
+
         switch (direction) {
             case 'U':
                 position.y--;
@@ -46,9 +38,10 @@ public class Player {
             default:
                 System.out.println("Error");
         }
+        return position;
     }
 
-    void setPosition(Map map){
+    public void setPosition(Map map){
         boolean valid = false;
         int temp_x, temp_y;
 
