@@ -5,8 +5,8 @@ public class Map {
     private Random rand = new Random();
 
     //Variables
-    public int size;
-    public String [][] map;
+    int size;
+    String [][] map;
 
     public Map(int size){
         this.size = size;
