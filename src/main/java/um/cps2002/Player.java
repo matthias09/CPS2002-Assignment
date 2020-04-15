@@ -7,8 +7,8 @@ public class Player {
     private Random rand = new Random();
     private Scanner sc = new Scanner(System.in);
 
-    Position position;
-    Position start;
+    private Position position;
+    private Position start;
 
     Player(){
         this.position = new Position();
@@ -45,6 +45,24 @@ public class Player {
                 break;
             default:
                 System.out.println("Error");
+        }
+    }
+
+    void setPosition(Map map){
+        boolean valid = false;
+        int temp_x, temp_y;
+
+        while(!valid){
+            temp_x = rand.nextInt(map.size);
+            temp_y = rand.nextInt(map.size);
+
+            if((map.map[temp_y][temp_x].equals("G"))){
+                valid = true;
+                start.x = temp_x;
+                start.y = temp_y;
+                position.x = temp_x;
+                position.y = temp_y;
+            }
         }
     }
 }

@@ -3,7 +3,7 @@ package um.cps2002;
 public class Map {
     //Variables
     int size;
-    private String [][] map;
+    String [][] map;
 
     Map(int size){
         this.size = size;
