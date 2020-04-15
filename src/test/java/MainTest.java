@@ -3,7 +3,7 @@ import org.junit.Test;
 import static org.junit.Assert.*;
 
 public class MainTest {
-    Main main;
+    /*Main main;
 
     @Test
     public void testClass(){
@@ -14,5 +14,5 @@ public class MainTest {
         assertEquals("Hello",msg);
 
     }
-
+*/
 }
