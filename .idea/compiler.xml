@@ -6,8 +6,8 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="CPS2002-Assignment" />
         <module name="Assignment" />
+        <module name="CPS2002-Assignment" />
       </profile>
     </annotationProcessing>
   </component>
