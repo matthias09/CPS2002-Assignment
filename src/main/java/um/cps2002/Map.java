@@ -42,4 +42,8 @@ public class Map {
             }
         }
     }
+
+    String getTileType(Position p){
+        return map[p.y][p.x];
+    }
 }
