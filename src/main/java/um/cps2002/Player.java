@@ -6,7 +6,7 @@ public class Player {
     private Random rand = new Random();
 
     public Position position;
-    private Position start;
+    Position start;
 
     public Player(){
         this.position = new Position();
@@ -42,7 +42,7 @@ public class Player {
         return position;
     }
 
-    public void setPosition(Map map){
+    void setPosition(Map map){
         boolean valid = false;
         int temp_x, temp_y;
 
