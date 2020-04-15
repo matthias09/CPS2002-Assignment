@@ -5,15 +5,16 @@ import java.util.Random;
 public class Player {
     private Random rand = new Random();
 
-    private Position position;
-    private Position start;
+    public Position position;
+    public Position start;
 
     public Player(){
         this.position = new Position();
         this.start = new Position();
     }
 
-    Position move(Map map, char direction) {
+
+    public Position move(Map map, char direction) {
         if ((direction == 'U' && position.y == 0)
                 || (direction == 'D' && position.y == map.size - 1)
                 || (direction == 'L' && position.x == 0)
@@ -41,7 +42,7 @@ public class Player {
         return position;
     }
 
-    void setPosition(Map map){
+    public void setPosition(Map map){
         boolean valid = false;
         int temp_x, temp_y;
 
