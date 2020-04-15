@@ -6,12 +6,13 @@ public class Player {
     private Random rand = new Random();
 
     public Position position;
-    public Position start;
+    private Position start;
 
     public Player(){
         this.position = new Position();
         this.start = new Position();
     }
+
 
     public Position move(Map map, char direction) {
         if ((direction == 'U' && position.y == 0)
