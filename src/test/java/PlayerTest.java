@@ -11,6 +11,4 @@ public class PlayerTest {
       p.position
     }
 */
-
->>>>>>> PlayerRelease
 }
