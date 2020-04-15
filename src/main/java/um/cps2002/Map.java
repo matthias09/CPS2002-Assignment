@@ -8,7 +8,7 @@ public class Map {
     public int size;
     public String [][] map;
 
-    Map(int size){
+    public Map(int size){
         this.size = size;
         map = new String[size][size];
     }
@@ -43,7 +43,7 @@ public class Map {
         }
     }
 
-    String getTileType(Position p){
+    public String getTileType(Position p){
         return map[p.y][p.x];
     }
 }
