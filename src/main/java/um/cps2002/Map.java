@@ -1,12 +1,11 @@
 package um.cps2002;
 import java.util.Random;
-
 public class Map {
     private Random rand = new Random();
 
     //Variables
     int size;
-    String [][] map;
+    private String [][] map;
 
     public Map(int size){
         this.size = size;
@@ -41,9 +40,25 @@ public class Map {
                 }
             }
         }
+
+
+        //Display map
+        for (int y = 0; y < size; y++) {
+            System.out.println(" ");
+            for (int x = 0; x < size; x++) {
+                System.out.print(map[y][x]);
+            }
+        }
+        System.out.println();
+
     }
+
 
     public String getTileType(Position p){
         return map[p.y][p.x];
     }
+    void setTileType(Position p, String str){
+        this.map[p.y][p.x] = str;
+    }
+
 }
