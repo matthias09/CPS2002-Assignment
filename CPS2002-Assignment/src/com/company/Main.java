@@ -79,11 +79,6 @@ public class Main {
         for(int i = 0 ; i < n_Players; i++) {
             map[i] = MainMap;
         }
-        //ADDED
-        //for(int i = 0; i < n_Players; i++){
-        //    file[i].MapToHtml(map);
-
-        //}
 
         //Step 3
         for (int x = 0; x < n_Players; x++) {
@@ -98,10 +93,8 @@ public class Main {
         boolean winner = false;
 
         while (!winner) {
-            //Step 4
-            //To be implemented: Generation of html files
 
-            //Step 5 and 6
+            //Step 4 and 5
             for (int x = 0; x < n_Players; x++) {
                 System.out.println("Player " + (x + 1) + " please input your move (U = Up, D = down, L = Left, R = Right):");
                 Position previousPosition = player[x].getPosition();
@@ -112,8 +105,7 @@ public class Main {
                 file[x].MapToHtml(map[x], false, p, prev);
             }
 
-            //Step 7
-            //for(int i = 0; i < n_Players; i++) {
+            //Step 6
                 for (int x = 0; x < n_Players; x++) {
                     System.out.print("Player " + (x + 1));
                     if (map[x].getTileType(player[x].position).equals("Y")) {
@@ -127,17 +119,14 @@ public class Main {
                         System.out.println(" stepped on grass");
                     }
                 }
-           // }
         }
 
         //Declaration of winners
         System.out.println("Winner(s): ");
-        //for(int i = 0; i < n_Players; i++) {
             for (int x = 0; x < n_Players; x++) {
                 if (map[x].getTileType(player[x].position).equals("Y"))
                     System.out.print((x + 1) + " ");
             }
-        //}
     }
 
 

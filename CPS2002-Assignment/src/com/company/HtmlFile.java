@@ -30,7 +30,7 @@ public class HtmlFile {
         }
 
         FileWriter file = new FileWriter("map_player_"+(player.getNumber() + 1)+".html");
-
+        //adding the head of the HTML document
         file.write("<!DOCTYPE html><html><head>\n" +
                 "<style>\n" +
                 ".grid-container {\n" +
@@ -65,6 +65,7 @@ public class HtmlFile {
                     }
                 }
             }
+            //setting the player's current position on the HTML file grid
         } else{
             if(map.getTileType(currentPosition).equals("G")){
                 this.hiddenMap[currentPosition.y][currentPosition.x] = "<div style=\"background-color:Green;\" class=\"grid-item\">P</div>";
@@ -93,7 +94,7 @@ public class HtmlFile {
         file.close();
         return file;
     }
-
+    //calculate what teh grid looks like in order to utilize it when the user steps on one of the tiles
     void CalculateGrid(Map map){
         Position p = new Position();
         for(int i = 0 ; i < map.size; i++){
